@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting...</title>
+</head>
+<style>
+    /* General Styles */
+    body {
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    /* Loader Content */
+    .loader {
+        position: relative;
+        display: inline-block;
+        margin-top: 15em;
+        width: 48px;
+    }
+
+    .loader:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    /* Loader Circle */
+    .circle {
+        animation: rotate 2s linear infinite;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform-origin: center center;
+        width: 48px;
+    }
+
+    .path {
+        animation: dash 1.7s ease-in-out infinite;
+        stroke: #0088ce;
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+    }
+
+    /* Loading Circle Animation */
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+        }
+
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -35px;
+        }
+
+        100% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -124px;
+        }
+    }
+</style>
+<script src="../js/Animation_character_model.js"></script>
+<script src="../js/Movie_character_model.js"></script>
+
+<body>
+    <div id="loadingDiv" class="overlay-backdrop light text-center">
+        <div class="loader">
+            <svg class="circle" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10" />
+            </svg>
+        </div><!-- end .loader -->
+
+        <p>Loading, please wait...</p>
+    </div>
+    <script>
+        window.onload = function () {
+            setTimeout(function(){
+                location.href = "http://localhost:3000/result";
+            }, 5000);
+        };
+    </script>
+</body>
+
+</html>

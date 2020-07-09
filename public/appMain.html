@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appMain</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./js/navigationBar.js"></script>
+    <link rel="stylesheet" href="./css/navigationBar.css">
+    <style>
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #F1C863;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        article {
+            margin: 0;
+            padding: 0;
+            border-top: 0.35em solid #ffcf33;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            /* background-color: #e2e2e2; */
+            background: url(../asset/Background/bg4.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #logo {
+            margin-top: 6em;
+            margin-bottom: 1.5em;
+        }
+
+        .content {
+            font-size: 2em;
+            color: white;
+        }
+
+        @media all and (min-width: 1024px) {
+            .bg {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                /* background-color: #e2e2e2; */
+                background: url(../asset/Background/bg3.png);
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <!-- navigationBar.js 에서 동적으로 아이템 생성 -->
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <article></article>
+    <div class="bg">
+        <!-- <img id="logo" src="https://upload.wikimedia.org/wikipedia/en/8/8d/Sejong_University.png" alt="logo">
+        <div class="content">
+            <h3>서버프로그래밍 2조</h3>
+            <p>팀장 : 김태훈</p>
+            <p>팀원 : 남재현</p>
+            <p>팀원 : 이헌기</p>
+        </div> -->
+    </div>
+</body>
+
+</html>
